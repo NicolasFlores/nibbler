@@ -9,4 +9,5 @@ Developped on OS X.
 
 ## SETUP
 
+sh build_imgui.sh && sh build_sdl.sh
 make && ./nibbler <map_width> <mp_height> <sdl|ncurses|imgui>
