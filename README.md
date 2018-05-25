@@ -10,6 +10,7 @@ Developped on and for OS X.
 ## SETUP
 
 ./configure.sh
+
 make && ./nibbler [map_width] [mp_height] [sdl|ncurses|imgui] <-sound> <-no-border>
 
 ## KEYS
