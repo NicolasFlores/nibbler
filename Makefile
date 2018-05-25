@@ -18,7 +18,9 @@ $(NAME): $(O_FILES)
 	make -C ./sdl
 	make -C ./ncurses
 	make -C ./imgui
+	make -C ./irrklang
 	$(CC) $(FLAGS) $^ $(LIB) $(SRCI) -o $@ && echo "Done"
+	install_name_tool -change "/usr/local/lib/libirrklang.dylib" "./lib/irrKlang/irrKlang-64bit-1.6.0/bin/macosx-gcc/libirrklang.dylib"  irrklang/nibbler_irrklang.so
 
 $(O_DIR)%.o: $(C_DIR)%.cpp
 	@mkdir -p $(O_DIR)
@@ -28,12 +30,14 @@ clean:
 	make clean -C ./sdl
 	make clean -C ./ncurses
 	make clean -C ./imgui
+	make clean -C ./irrklang
 	@rm -Rf $(O_DIR)
 
 fclean: clean
 	make fclean -C ./sdl
 	make fclean -C ./ncurses
 	make fclean -C ./imgui
+	make fclean -C ./irrklang
 	@rm -f $(NAME) test_$(NAME)
 	@rm -Rf .tmp/
 
