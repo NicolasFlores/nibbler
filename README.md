@@ -16,5 +16,7 @@ make && ./nibbler [map_width] [mp_height] [sdl|ncurses|imgui] <-sound> <-no-bord
 ## KEYS
 
 UP, DOWN, LEFT and RIGHT to move
+
 1, 2 ,3 to swicth library
+
 ESC to leave
